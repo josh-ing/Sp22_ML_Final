@@ -1,0 +1,175 @@
+Main Category: XX00
+Category: 00XX
+
+Art: 01XX
+	Ceramics: 0101
+	Conceptual Art: 0102
+	Digital Art: 0103
+	Illustration: 0104
+	Installations: 0105
+	Mixed Media: 0106
+	Painting: 0107
+	Performance Art: 0108
+	Public Art: 0109
+	Sculpture: 0110
+	Social Practice: 0111
+	Textiles: 0112
+	Video Art: 0113
+Comics: 02XX
+	Anthologies: 0201
+	Comic Books: 0202
+	Events: 0203
+	Graphic Novels: 0204
+	Webcomics: 0205
+Crafts: 03XX
+	Candles: 0301
+	Crochet: 0302
+	DIY: 0303
+	Embroidery: 0304
+	Glass: 0305
+	Knitting: 0306
+	Letterpress: 0307
+	Pottery: 0308
+	Printing: 0309
+	Quilts: 0310
+	Stationery: 0311
+	Taxidermy: 0312
+	Weaving: 0313
+	Woodworking: 0314
+Dance: 04XX
+	Performances: 0401
+	Residencies: 0402
+	Spaces: 0403
+	Workshops: 0404
+Design: 05XX
+	Architecture: 0501
+	Civic Design: 0502
+	Graphic Design: 0503
+	Interactive Design: 0504
+	Product Design: 0505
+	Toys: 0506
+	Typography: 0507
+Fashion: 06XX
+	Accessories: 0601
+	Apparel: 0602
+	Childrenswear: 0603
+	Couture: 0604
+	Footwear: 0605
+	Jewelry: 0606
+	Pet Fashion: 0607
+	Ready-to-wear: 0608
+Film & Video: 07XX
+	Action: 0701
+	Animation: 0702
+	Comedy: 0703
+	Documentary: 0704
+	Drama: 0705
+	Experimental: 0706
+	Family: 0707
+	Fantasy: 0708
+	Festivals: 0709
+	Horror: 0710
+	Movie Theaters: 0711
+	Music Videos: 0712
+	Narrative Film: 0713
+	Romance: 0714
+	Science Fiction: 0715
+	Shorts: 0716
+	Television: 0717
+	Thrillers: 0718
+	Webseries: 0719
+Food: 08XX
+	Bacon: 0801
+	Community Gardens: 0802
+	Cookbooks: 0803
+	Drinks: 0804
+	Events: 0805
+	Farmer's Markets: 0806
+	Farms: 0807
+	Food Trucks: 0808
+	Restaurants: 0809
+	Small Batch: 0810
+	Spaces: 0811
+	Vegan: 0812
+Games: 09XX
+	Gaming Hardware: 0901
+	Live Games: 0902
+	Mobile Games: 0903
+	Playing Cards: 0904
+	Puzzles: 0905
+	Tabletop Games: 0906
+	Video Games: 0907
+Journalism: 10XX
+	Audio: 1001
+	Photo: 1002
+	Print: 1003
+	Video: 1004
+	Web: 1005
+Music: 11XX
+	Blues: 1101
+	Chiptune: 1102
+	Classical Music: 1103
+	Comedy: 1104
+	Country & Folk: 1105
+	Electronic Music: 1106
+	Faith: 1107
+	Hip-Hop: 1108
+	Indie Rock: 1109
+	Jazz: 1110
+	Kids: 1111
+	Latin: 1112
+	Metal: 1113
+	Pop: 1114
+	Punk: 1115
+	R&B: 1116
+	Rock: 1117
+	World Music: 1118
+Photography: 12XX
+	Animals: 1201
+	Fine Art: 1202
+	Nature: 1203
+	People: 1204
+	Photobooks: 1205
+	Places: 1206
+Publishing: 13XX
+	Academic: 1301
+	Anthologies: 1302
+	Art Books: 1303
+	Calendars: 1304
+	Children's Books: 1305
+	Comedy: 1306
+	Fiction: 1307
+	Letterpress: 1308
+	Literary Journals: 1309
+	Literary Spaces: 1310
+	Nonfiction: 1311
+	Periodicals: 1312
+	Poetry: 1313
+	Radio & Podcasts: 1314
+	Translations: 1315
+	Young Adult: 1316
+	Zines: 1317
+Technology: 14XX
+	3D Printing: 1401
+	Apps: 1402
+	Camera Equipment: 1403
+	DIY Electronics: 1404
+	Fabrication Tools: 1405
+	Flight: 1406
+	Gadgets: 1407
+	Hardware: 1408
+	Makerspaces: 1409
+	Robots: 1410
+	Software: 1411
+	Sound:	 1412
+	Space Exploration: 1413
+	Wearables: 1414
+	Web: 1415
+Theater: 15XX
+	Comedy: 1501
+	Experimental: 1502
+	Festivals: 1503
+	Immersive: 1504
+	Musical: 1505
+	Plays: 1506
+	Spaces: 1507

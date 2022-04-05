@@ -24,8 +24,8 @@ The goal of our project is to predict the future success of a project put on Kic
 - Pledged
 - State
 31 columns total, 12 string features, 8 decimal features, 4 date/time features, and 7 other.
-![alt text](https://github.com/jng45/jng45.github.io/blob/main/CategoryVsRatio.png?raw=true)
-![alt text](https://github.com/jng45/jng45.github.io/blob/main/CategoryVsNumProjects.png?raw=true)
+![image](CategoryVsRatio.png)
+![image](CategoryVsNumProjects.png)
 
 ### Methods 
 Currently, the algorithms that we have contemplated using to solve this problem are some combination of Naive Bayes, Logistic Regression, and Random Forests. All three of these potential algorithms are designed for supervised learning and classification problems, the type of problem that our dataset falls under. Additionally, we can utilize NLP algorithms like Neural Bag of Words on certain features such as project titles and categories to further help predict the projects’ chances of success.  Of course, the chosen algorithms are subject to change in the future, especially since the lectures have yet to cover supervised learning.

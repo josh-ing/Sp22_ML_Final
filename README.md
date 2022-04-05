@@ -26,6 +26,7 @@ The goal of our project is to predict the future success of a project put on Kic
 31 columns total, 12 string features, 8 decimal features, 4 date/time features, and 7 other.
 ![image](CategoryVsRatio.png)
 ![image](CategoryVsNumProjects.png)
+
 To see the Category Numbers to Text Description mapping, please see the Category to Number Legend.txt file.
 
 ### Methods 

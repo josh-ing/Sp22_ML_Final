@@ -26,6 +26,7 @@ The goal of our project is to predict the future success of a project put on Kic
 31 columns total, 12 string features, 8 decimal features, 4 date/time features, and 7 other.
 ![image](CategoryVsRatio.png)
 ![image](CategoryVsNumProjects.png)
+To see the Category Numbers to Text Description mapping, please see the Category to Number Legend.txt file.
 
 ### Methods 
 Currently, the algorithms that we have contemplated using to solve this problem are some combination of Naive Bayes, Logistic Regression, and Random Forests. All three of these potential algorithms are designed for supervised learning and classification problems, the type of problem that our dataset falls under. Additionally, we can utilize NLP algorithms like Neural Bag of Words on certain features such as project titles and categories to further help predict the projects’ chances of success.  Of course, the chosen algorithms are subject to change in the future, especially since the lectures have yet to cover supervised learning.

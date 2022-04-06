@@ -61,6 +61,7 @@ I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test
 
 The final approach we used was long term short memory. The difference between bag of words and LSTM is that there are feedback connections present. After running 30 epochs, our results are shown below. 
 ![image](lstm.png)
+
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
 
 

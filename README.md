@@ -75,7 +75,7 @@ The drop in accuracy can be explained by the nature of our data: the categories 
 Out of all the algorithms we had used, random forest was the algorithm with the highest success rate and accuracy, as well as the most efficient. While all our other algorithms took around 3 hours to run 30 epochs even with CUDA enabled, random forest was the quickest and most efficient, clocking in at only 2 minutes. 
 With our data already processed with PCA, there was no need to worry about accuracy drops due to overfitting. Because of the random nature of our algorithm, selecting the feature to split the decision tree is very simple and is not dependent on our subset of data. This leads to increased accuracy and less time processing the most important feature to split on. 
 ![image](rf_individualtree.png)
-This is forest of our data, and the different random leaves we split the trees on. The structure of this tree is dynamic, and always consistently gives us 99% accuracy.
+This is forest of our data, and the different random leaves we split the trees on. The structure of this tree is dynamic, and always consistently gives us 90% accuracy.
 
 We also utilized MDI, which is mean decrease in impurity. This is a measure of the disorder of our subset of data. We calculate the total reduction in loss or impurity when splitting on a given feature, and also contributes to the efficiency of our algorithm. Also known as the 'gini important', calculating MDI is useful for calculating the probability of misclassifying an observation, which can affect our accuracy. 
 ![image](random_forest_mdi.png)

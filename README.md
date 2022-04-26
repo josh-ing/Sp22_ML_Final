@@ -60,7 +60,7 @@ The different groups of datapoints on the scatterplot represent the different gr
 ## Naive Bayes
 After reducing our data dimensions and training the model, we end up with an accuracy of 59.2%. This less than ideal accuracy is a result of the shortcomings of PCA. Typicaly , PCA does not accept categorical data. We had to take out the categorical data, run PCA, and add the catogrical data back to our reduced dimensions, which could explain the reduction in accuracy. PCA also has difficulty determining order if variables are not correlated. I believe that there is not a strong correlation between our data for USD raised and category, so PCA was unable to determine a correlation. Because this was the case, PCA ordered our variables according to variances, which heavily affected our accuracy.
 
-## Natrual Language Processing
+## Natural Language Processing
 In addition to Naive Bayes, we implemented the NLP Bag of Words approach on our list of Kickstarter titles and categories. 
 Initially training the model with 20% of the dataset, we get a result of 64% accuracy and an F-score of 0.6. However, when we increase the size of the dataset we are sampling, as well as use better hardware, our accuracy increases.
 I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test and accuracy.
@@ -71,6 +71,15 @@ The final approach we used was long term short memory. The difference between ba
 
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
 
+## Random Forest
+Out of all the algorithms we had used, random forest was the algorithm with the highest success rate and accuracy, as well as the most efficient. While all our other algorithms took around 3 hours to run 30 epochs even with CUDA enabled, random forest was the quickest and most efficient, clocking in at only 2 minutes. 
+With our data already processed with PCA, there was no need to worry about accuracy drops due to overfitting. Because of the random nature of our algorithm, selecting the feature to split the decision tree is very simple and is not dependent on our subset of data. This leads to increased accuracy and less time processing the most important feature to split on. 
+![image](rf_individualtree.png)
+This is forest of our data, and the different random leaves we split the trees on. The structure of this tree is dynamic, and always consistently gives us 99% accuracy.
+
+We also utilized MDI, which is mean decrease in impurity. This is a measure of the disorder of our subset of data. We calculate the total reduction in loss or impurity when splitting on a given feature, and also contributes to the efficiency of our algorithm. Also known as the 'gini important', calculating MDI is useful for calculating the probability of misclassifying an observation, which can affect our accuracy. 
+![image](random_forest_mdi.png)
+The lower the MDI, the better the split, which reduces the likelihood of misclassification.
 
 ### References
 - Yuan, Hui, et al. “The Determinants of Crowdfunding Success: A Semantic Text Analytics Approach.” Decision Support Systems, North-Holland, 6 Aug. 2016, https://www.sciencedirect.com/science/article/pii/S0167923616301373. 

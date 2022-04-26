@@ -24,6 +24,12 @@ The goal of our project is to predict the future success of a project put on Kic
 - Pledged
 - State
 
+### Data Collection:
+Our dataset was sourced from Kaggle and contains data on Kickstarter projects from 2009-2018. The data contained information about the project's timeline, it's goal amount, how much was raised and the category of the project. We chose this dataset becuase of its size with over 331 thousand completed projects. It also represents a wide range of project dates, which encapsulates changes in the popularity of Kickstarter (as the platform gained publicity since its 2009 creation). The classification labels of this dataset are clearly defined and binary, which makes defining success to the models clearer. 
+To trim this data, we deleted any projects that were still ongoing as we did not have the data about the projects completion. We also consolidated the data to be generalized in USD rather than any other currencies. 
+
+Due to the nature of the categories needing to be quantified, each category was given a numerical value in order to be able to be processed by our models. This translation allowed us to visualize our data and see the graphical trends between the type of category and success rate, as well as be able to use the categories as a feature in our models. 
+
 
 ### Dataset visualization
 Pictured below are the distribution of our various categories. 

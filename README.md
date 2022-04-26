@@ -30,6 +30,7 @@ To trim this data, we deleted any projects that were still ongoing as we did not
 
 Due to the nature of the categories needing to be quantified, each category was given a numerical value in order to be able to be processed by our models. This translation allowed us to visualize our data and see the graphical trends between the type of category and success rate, as well as be able to use the categories as a feature in our models. 
 
+There were 15 main categories, with a variable number of subcategories. These were Arts, Comics, Crafts, Dance, Design, Fashion, Film & Video, Food, Games, Journalism, Music, Photography, Publishing, Technology, and Theater. They are number encoded from  0100 to 1500, where main categories represent the first two digits and subcategories represent the second two digits. Subcategories are labels like action, animation, and comedy for Film & Video and ceramics, digital art, and painting for Arts. Overall there are 157 possible category classifications for a project given by the dataset. 
 
 ### Dataset visualization
 Pictured below are the distribution of our various categories. 

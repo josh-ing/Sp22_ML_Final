@@ -71,11 +71,23 @@ I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test
 
 ![image](bow_accuracy.png)
 
-The final approach we used was long term short memory. The difference between bag of words and LSTM is that there are feedback connections present. After running 30 epochs, our results are shown below. 
+After the midterm report, we incorporated categories('category' and 'main_category' column) at the end of each title and then ran NBOW model again. As a result, we could increase both accuracy and F1 score as below.
+
+![image](bow_cat_accuracy.png)
+
+![image](bag_of_words_accuracy.png)
+
+Second approach we used was long term short memory. The difference between bag of words and LSTM is that there are recurrent layer present between embedding layer and linear layer. After running 30 epochs, our results are shown below. 
 
 ![image](lstm.png)
 
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
+
+Last approach was experimental. We applied pretrained transformer classifier model, which called RoBERTa, to classify which title will success funding or not. After some fine tuning, we could get the result below.
+
+![image](transformer_acc.png)
+
+It seems both LSTM & Transformer approach doesn't seem to make evident improvements. We think that as titles are short summaries of whole project, each word represents a lot of information regardless of its order. Moreover, title can be a just listing of product name. That makes positional information to neglectable amount.
 
 ## Random Forest
 Out of all the algorithms we had used, random forest was the algorithm with the highest success rate and accuracy, as well as the most efficient. While all our other algorithms took around 3 hours to run 30 epochs even with CUDA enabled, random forest was the quickest and most efficient, clocking in at only 2 minutes. 

@@ -85,7 +85,7 @@ After reducing our data dimensions with PCA, we trained our model using the prob
 
 There is, perhaps obviously, room for improvement for this model. The most major way that we can improve this model is by changing the chosen distributions that represent each continuous feature. Currently, we assume that each of the continuous features takes on a normal (Guassian) distribution. However, as seen below (and on the graphs from Figure 2), we can see that this is not the case for most of the continuous features. The image on the left shows data that could arguably be modeled by a normal distribution, but the image on the right shows data that can definitely not be modeled as such. If we choose a more fitting distribution for these features, such as a lognormal distribution, the accuracy of this model would increase.
 
-![image](Norm_Dist_Num_Days.png)            ![image](Norm_Dist_Avg_USD_Backer.png)
+![image](Norm_Dist_Num_Days.png) ![image](Norm_Dist_Avg_USD_Backer.png)
 
 Similarly, another possible reason that this model has a lower accuracy is due to another assumption, the Naive assumption. With the Naive assumption, we assume that all the features are independent of one another. However, it is very possible that the features are not completely independent, thus affecting the accuracy of the model.
 

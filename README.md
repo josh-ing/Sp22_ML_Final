@@ -69,7 +69,7 @@ In addition to Naive Bayes, we implemented the NLP Bag of Words approach on our 
 Initially training the model with 20% of the dataset, we get a result of 64% accuracy and an F-score of 0.6. However, when we increase the size of the dataset we are sampling, as well as use better hardware, our accuracy increases.
 I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test and accuracy.
 
-![image](bow_accuracy.png)
+![image](bow_acc.png)
 
 After the midterm report, we incorporated categories('category' and 'main_category' column) at the end of each title and then ran NBOW model again. As a result, we could increase both accuracy and F1 score as below.
 

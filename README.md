@@ -81,6 +81,10 @@ Second approach we used was long term short memory. The difference between bag o
 
 ![image](lstm.png)
 
+Below graph is the result of LSTM approach after incorporating category information at the end of each titles.
+
+![image](LSTM_final.png)
+
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
 
 Last approach was experimental. We applied pretrained transformer classifier model, which called RoBERTa, to classify which title will success funding or not. After some fine tuning, we could get the result below.

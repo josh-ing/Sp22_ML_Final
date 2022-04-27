@@ -34,6 +34,7 @@ There were 15 main categories, with a variable number of subcategories. These we
 
 ### Dataset visualization
 Pictured below are the distribution of our various categories. 
+
 ![image](CategoryVsRatio.png)
 ![image](CategoryVsNumProjects.png)
 ![image](figure3.png)
@@ -53,8 +54,10 @@ Ideally, the result would be that the models we create would correctly label the
 
 
 ### Feature Reduction (PCA)
-Upon analyzing our data, there were some category numbers that did not have an intrinsic relationship with the success of the Kickstarter. To first approach our data, we first applied principal componenet analysis (PCA) to reduce our dataset. We reduced the dataset to 3 features from a total of 31 features and retained a 94% variance. Our new labeled categories and features can be found in the legend.txt file. 
+Upon analyzing our data, there were some category numbers that did not have an intrinsic relationship with the success of the Kickstarter. To first approach our data, we first applied principal componenet analysis (PCA) to reduce our dataset. We reduced the dataset to 3 features from a total of 31 features and retained a 94% variance. Our new labeled categories and features can be found in the Category to Number Legend txt file. 
+
 ![image](dimension_reduce.png)
+
 The different groups of datapoints on the scatterplot represent the different grouping of similar features. There is difficulty distinguishing between different category numbers as well as USD for each goal, so there is not a clear trend for our reduced data. 
 
 
@@ -65,9 +68,11 @@ After reducing our data dimensions and training the model, we end up with an acc
 In addition to Naive Bayes, we implemented the NLP Bag of Words approach on our list of Kickstarter titles and categories. 
 Initially training the model with 20% of the dataset, we get a result of 64% accuracy and an F-score of 0.6. However, when we increase the size of the dataset we are sampling, as well as use better hardware, our accuracy increases.
 I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test and accuracy.
+
 ![image](bow_accuracy.png)
 
 The final approach we used was long term short memory. The difference between bag of words and LSTM is that there are feedback connections present. After running 30 epochs, our results are shown below. 
+
 ![image](lstm.png)
 
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
@@ -80,6 +85,7 @@ This is the forest of our data, and the different random leaves we split the tre
 
 We also utilized MDI, which is mean decrease in impurity. This is a measure of the disorder of our subset of data. We calculate the total reduction in loss or impurity when splitting on a given feature, and also contributes to the efficiency of our algorithm. Also known as the 'gini important', calculating MDI is useful for calculating the probability of misclassifying an observation, which can affect our accuracy. 
 ![image](random_forest_mdi.png)
+
 The lower the MDI, the better the split, which reduces the likelihood of misclassification.
 
 ### References

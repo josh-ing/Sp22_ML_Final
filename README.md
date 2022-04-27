@@ -4,6 +4,9 @@
 ## Project Proposal video:
 [Youtube video](https://youtu.be/4cCjK_wPxOY)
 
+## Final Project Video:
+[Youtube video](https://www.youtube.com/watch?v=h4jkAYJMAWY)
+
 ### Introduction:
 Since its inception in 2009, Kickstarter has been a popular way for entrepreneurs and creators to raise funds for their project. Anyone can become a backer for a project, pledging any amount of money and only paying if the project is deemed successful. Success on Kickstarter is defined as reaching the goal pledge amount within a predetermined time frame, at which point funds are collected and given to the creators. If the goal amount is not reached, the project is considered a failure. The current success rate of projects is relatively low, with only 44 percent of Kickstarter projects being considered successful (Yuan et al.). The most important information provided by our dataset is the category of the project, fundraising goal, how long the campaign was open, number of backers, amount pledged, country pledged from, and the outcome of the project.
 

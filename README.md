@@ -4,6 +4,9 @@
 ## Project Proposal video:
 [Youtube video](https://youtu.be/4cCjK_wPxOY)
 
+## Final Project Video:
+[Youtube video](https://www.youtube.com/watch?v=h4jkAYJMAWY)
+
 ### Introduction:
 Since its inception in 2009, Kickstarter has been a popular way for entrepreneurs and creators to raise funds for their project. Anyone can become a backer for a project, pledging any amount of money and only paying if the project is deemed successful. Success on Kickstarter is defined as reaching the goal pledge amount within a predetermined time frame, at which point funds are collected and given to the creators. If the goal amount is not reached, the project is considered a failure. The current success rate of projects is relatively low, with only 44 percent of Kickstarter projects being considered successful (Yuan et al.). The most important information provided by our dataset is the category of the project, fundraising goal, how long the campaign was open, number of backers, amount pledged, country pledged from, and the outcome of the project.
 
@@ -34,6 +37,7 @@ There were 15 main categories, with a variable number of subcategories. These we
 
 ### Dataset visualization
 Pictured below are the distribution of our various categories. 
+
 ![image](CategoryVsRatio.png)
 ![image](CategoryVsNumProjects.png)
 ![image](figure3.png)
@@ -53,8 +57,10 @@ Ideally, the result would be that the models we create would correctly label the
 
 
 ### Feature Reduction (PCA)
-Upon analyzing our data, there were some category numbers that did not have an intrinsic relationship with the success of the Kickstarter. To first approach our data, we first applied principal componenet analysis (PCA) to reduce our dataset. We reduced the dataset to 3 features from a total of 31 features and retained a 94% variance. Our new labeled categories and features can be found in the legend.txt file. 
+Upon analyzing our data, there were some category numbers that did not have an intrinsic relationship with the success of the Kickstarter. To first approach our data, we first applied principal componenet analysis (PCA) to reduce our dataset. We reduced the dataset to 3 features from a total of 31 features and retained a 94% variance. Our new labeled categories and features can be found in the Category to Number Legend txt file. 
+
 ![image](dimension_reduce.png)
+
 The different groups of datapoints on the scatterplot represent the different grouping of similar features. There is difficulty distinguishing between different category numbers as well as USD for each goal, so there is not a clear trend for our reduced data. 
 
 
@@ -65,12 +71,30 @@ After reducing our data dimensions and training the model, we end up with an acc
 In addition to Naive Bayes, we implemented the NLP Bag of Words approach on our list of Kickstarter titles and categories. 
 Initially training the model with 20% of the dataset, we get a result of 64% accuracy and an F-score of 0.6. However, when we increase the size of the dataset we are sampling, as well as use better hardware, our accuracy increases.
 I tested with 30% of the dataset, and as seen below, we yield a greater F-1 test and accuracy.
-![image](bow_accuracy.png)
 
-The final approach we used was long term short memory. The difference between bag of words and LSTM is that there are feedback connections present. After running 30 epochs, our results are shown below. 
+![image](bow_acc.png)
+
+After the midterm report, we incorporated categories('category' and 'main_category' column) at the end of each title and then ran NBOW model again. As a result, we could increase both accuracy and F1 score as below.
+
+![image](bow_cat_accuracy.png)
+
+![image](bag_of_words_accuracy.png)
+
+Second approach we used was long term short memory. The difference between bag of words and LSTM is that there are recurrent layer present between embedding layer and linear layer. After running 30 epochs, our results are shown below. 
+
 ![image](lstm.png)
 
+Below graph is the result of LSTM approach after incorporating category information at the end of each titles.
+
+![image](LSTM_final.png)
+
 The drop in accuracy can be explained by the nature of our data: the categories make it difficult to differeniate data and approach it with either bag of words or LSTM.
+
+Last approach was experimental. We applied pretrained transformer classifier model, which called RoBERTa, to classify which title will success funding or not. After some fine tuning, we could get the result below.
+
+![image](transformer_acc.png)
+
+It seems both LSTM & Transformer approach doesn't seem to make evident improvements. We think that as titles are short summaries of whole project, each word represents a lot of information regardless of its order. Moreover, title can be a just listing of product name. That makes positional information to neglectable amount.
 
 ## Random Forest
 Out of all the algorithms we had used, random forest was the algorithm with the highest success rate and accuracy, as well as the most efficient. While all our other algorithms took around 3 hours to run 30 epochs even with CUDA enabled, random forest was the quickest and most efficient, clocking in at only 2 minutes. 
@@ -80,6 +104,7 @@ This is the forest of our data, and the different random leaves we split the tre
 
 We also utilized MDI, which is mean decrease in impurity. This is a measure of the disorder of our subset of data. We calculate the total reduction in loss or impurity when splitting on a given feature, and also contributes to the efficiency of our algorithm. Also known as the 'gini important', calculating MDI is useful for calculating the probability of misclassifying an observation, which can affect our accuracy. 
 ![image](random_forest_mdi.png)
+
 The lower the MDI, the better the split, which reduces the likelihood of misclassification.
 
 ### References

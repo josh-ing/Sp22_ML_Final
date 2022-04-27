@@ -132,7 +132,7 @@ The last NLP approach we used was a bit more experimental. We utilized a pretrai
 
 ![image](transformer_acc.png)
 
-It seems both LSTM & RoBERTa don't make any clear improvements to the NBoW model. This may be because the titles are effectively only short summaries of the whole project, and as such each word represents a lot of information regardless of its order. Moreover, it may also be due to the title being just a listing of a product's name, thus making the positional information of the words negligible.
+It seems both LSTM and RoBERTa don't make any clear improvements to the NBoW model. This may be because the titles are effectively only short summaries of the whole project, and as such each word represents a lot of information regardless of its order. Moreover, it may also be due to the title being just a listing of a product's name, thus making the positional information of the words negligible.
 
 
 ### Conclusion
